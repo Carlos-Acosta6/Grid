@@ -16,14 +16,13 @@ body{
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: ;
+   
     gap: 22px;
     padding: 10px;
 }
 
 .cartas{
-
-    border: 2px solid black;
     border-radius: 12px ;
     background-color: lightblue;
     padding: 30px;
@@ -53,14 +52,29 @@ body{
 }
 
 .info p{
-    font-size: 1.3 rem;
+    font-size: 1.3rem;
+}
+
+.titulo{
+    margin-bottom: 20px;
+}
+
+.titulo h2{
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.texto p{
+    font-size: 1.4rem;
 }
 
 
 
 .cartas:first-child{
     
-    grid-column: 1/span 3;
-    height: auto;
+    grid-column: 1/ span 3;
+   
+   
     
 }
+
