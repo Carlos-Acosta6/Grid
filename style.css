@@ -10,39 +10,52 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
+   
 }
+
+/*Escritorio*/
 
 .container{
     max-width: 1400px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: ;
-   
-    gap: 22px;
+    margin: auto;
+    grid-template-columns: repeat(5, minmax (200px, 1fr));
+    grid-template-rows: repeat(2, minmax (200px, 1fr));
+    grid-template-areas: 
+    "header header header nav aside"
+    "body footer footer footer aside";
+    gap: 25px;
     padding: 10px;
+
+    
+   
 }
 
 .cartas{
+  
     border-radius: 12px ;
-    background-color: lightblue;
     padding: 30px;
+
 }
+
 
 .personaje{
     display: flex;
     column-gap: 15px;
     align-items: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
    
 }
 
 .personaje img{
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    max-width: 40px;
+    height: 40px;
+    width: 100%;
     border: 1px solid black;
     border-radius: 100%;
-    background-color: red;
+    
 }
 
 .info h2{
@@ -53,7 +66,7 @@ body{
 
 .info p{
     font-size: 1.3rem;
-}
+}   
 
 .titulo{
     margin-bottom: 20px;
@@ -62,19 +75,153 @@ body{
 .titulo h2{
     font-size: 2.4rem;
     line-height: 1.2;
+    letter-spacing: -0.4px;
 }
 
 .texto p{
     font-size: 1.4rem;
+    line-height: 1.5;
 }
 
+.header{
+    grid-area: header;
+    background-color: lightskyblue;
+}
 
+.nav{
+    grid-area: nav;
+    background-color: lightgoldenrodyellow;
+}
 
-.cartas:first-child{
-    
-    grid-column: 1/ span 3;
-   
-   
+.nav h2{
+    color: black;
+}
+
+.aside{
+
+    grid-area: aside;
+    color: white    ;
+    background-color: black;
     
 }
 
+.body{
+    grid-area: body;
+    background-color: #ED2100;
+    
+}
+
+.footer{
+    grid-area: footer;
+    background-color: green;
+}
+
+/*Tablets*/
+
+@media (max-width: 800px){
+
+    .container{
+
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(5, minmax(100px, 1fr));
+        grid-template-rows: repeat(2, minmax(100px, 1fr));
+        grid-template-areas: 
+        "header header nav nav aside"
+        "footer footer body body aside";
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .cartas{
+  
+        border-radius: 12px ;
+        padding: 15px;
+
+    }
+
+    .personaje{
+        column-gap: 10px;
+    }
+
+    .personaje img{
+       
+        max-width: 30px;
+        height: 30px;   
+        
+    }
+
+    .info h2{
+        font-size: 1.5rem;
+    }
+
+    .info p{
+        font-size: 1rem;
+    }   
+
+
+    .titulo h2{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    
+    }
+
+    .texto p{
+        font-size: 1.3rem;
+        line-height: 1.5;
+
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .container{
+
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        grid-template-rows: repeat(5, minmax(100px, 1fr));
+        grid-template-areas: 
+        "header"
+        "nav"
+        "aside"
+        "footer"
+        "body";
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .cartas{
+        border-radius: 12px ;
+        padding: 30px;
+    }
+
+    .personaje{
+        column-gap: 15px;
+    }
+
+    .personaje img{
+        max-width: 40px;
+        height: 40px;    
+    }
+
+    .info h2{
+        font-size: 1.8rem;
+    }
+
+    .info p{
+        font-size: 1.3rem;
+    }   
+
+    .titulo h2{
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .texto p{
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+}
