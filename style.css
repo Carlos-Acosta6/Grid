@@ -26,8 +26,7 @@ body{
     "body footer footer footer aside";
     gap: 25px;
     padding: 10px;
-
-    
+   
    
 }
 
@@ -93,7 +92,7 @@ body{
     background-color: lightgoldenrodyellow;
 }
 
-.nav h2{
+.nav h2{    
     color: black;
 }
 
